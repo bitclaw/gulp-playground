@@ -1,6 +1,7 @@
-(function() {
+(function () {
     'use strict';
 
+    /*global angular */
     angular
         .module('app.customers')
         .controller('CustomerDetail', CustomerDetail);
