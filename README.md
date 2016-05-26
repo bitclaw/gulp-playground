@@ -23,3 +23,8 @@ $ bower install
 $ npm start
 ```
 
+### Tips
+
+http://stackoverflow.com/questions/32770896/nodes-del-command-callback-not-firing
+
+As of version 2.* node's del changed to return a promise instead of a callback.
