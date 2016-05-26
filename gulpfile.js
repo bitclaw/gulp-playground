@@ -21,14 +21,15 @@ gulp.task('styles',['clean-styles'], function () {
     return gulp
         .src(config.less)
         .pipe($.less())
-        .on('error', errorLogger)
+        //.on('error', errorLogger)
         .pipe($.autoprefixer({browsers: ['last 2 version', '> 5%']}))
         .pipe(gulp.dest(config.temp));
 });
 
-gulp.task('clean-styles', function (done) {
+gulp.task('clean-styles', function () {
     var files = config.temp + '**/*.css';
-    clean(files, done);
+    //del(files);
+    clean(files);
 });
 
 gulp.task('less-watcher', function () {
@@ -49,9 +50,9 @@ function log(msg) {
     }
 }
 
-function clean(path, done) {
+function clean(path) {
     log('Removing temporary files from ' + $.util.colors.blue(path));
-    del(path , done);
+    del(path);
 }
 
 function errorLogger(error) {
