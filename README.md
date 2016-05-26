@@ -1,6 +1,6 @@
 # gulp-playground
 
-I place to test gulp tasks.
+A place to test gulp tasks.
 
 ## Requirements
 
